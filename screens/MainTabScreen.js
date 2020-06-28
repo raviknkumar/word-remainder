@@ -9,6 +9,7 @@ import HomeScreen from './HomeScreen';
 import DetailsScreen from './DetailsScreen';
 import ExploreScreen from './ExploreScreen';
 import ProfileScreen from './ProfileScreen';
+import TodaysWords from "./TodayWords";
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
@@ -16,10 +17,7 @@ const DetailsStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
-    <Tab.Navigator
-      initialRouteName="Home"
-      activeColor="#fff"
-    >
+  <Tab.Navigator initialRouteName="Home" activeColor="#fff">
       <Tab.Screen
         name="Home"
         component={HomeStackScreen}
@@ -64,6 +62,18 @@ const MainTabScreen = () => (
           ),
         }}
       />
+
+      <Tab.Screen
+          name="TodayWords"
+          component={TodaysWords}
+          options={{
+              tabBarLabel: "Today's Words",
+              tabBarColor: '#d02860',
+              tabBarIcon: ({ color }) => (
+                  <Icon name="md-text" color={color} size={26} />
+              ),
+          }}
+      />
     </Tab.Navigator>
 );
 
@@ -105,4 +115,3 @@ const DetailsStackScreen = ({navigation}) => (
         }} />
 </DetailsStack.Navigator>
 );
-  
