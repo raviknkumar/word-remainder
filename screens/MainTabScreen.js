@@ -10,6 +10,7 @@ import DetailsScreen from './DetailsScreen';
 import ExploreScreen from './ExploreScreen';
 import ProfileScreen from './ProfileScreen';
 import TodaysWords from "./TodayWords";
+import SearchScreen from "./SearchScreen";
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
@@ -41,13 +42,13 @@ const MainTabScreen = () => (
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
+        name="Search"
+        component={SearchScreen}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Search',
           tabBarColor: '#694fad',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-person" color={color} size={26} />
+            <Icon name="ios-search" color={color} size={26} />
           ),
         }}
       />

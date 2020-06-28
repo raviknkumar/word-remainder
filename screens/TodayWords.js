@@ -12,6 +12,7 @@ import {fetchWordsForToday} from '../api/endpoints';
 import {getDateAsString, showToast} from '../commons/CommonUtils';
 import Loading from '../components/Loading';
 import Toast from 'react-native-simple-toast';
+import {globalStyles} from "../styles/global";
 
 const TodaysWords = (props) => {
 
@@ -72,7 +73,7 @@ const TodaysWords = (props) => {
 
     const listEmptyView = () => {
         return (
-            <View style={styles.mainContainer}>
+            <View style={globalStyles.emptyContainer}>
                 <View style={{alignItems:'center', justifyContent:'center'}}>
                     <Headline style={{textAlign: 'center', textAlignVertical: 'center'}}> Sorry, No Words are found for the current day. please check after some time</Headline>
                 </View>
