@@ -83,7 +83,8 @@ const styles = StyleSheet.create({
   },
   logo: {
       width: height_logo,
-      height: height_logo
+      height: height_logo,
+      borderRadius: 50,
   },
   title: {
       color: '#05375a',
