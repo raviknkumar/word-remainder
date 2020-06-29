@@ -89,12 +89,15 @@ const SearchScreen = ({navigation}) => {
 
         <TouchableWithoutFeedback onPress={hideSearchBar}>
         <View style={styles.container}>
-                    <Appbar.Header>
+
+            <Appbar.Header>
+
+                <Appbar.Action icon={"menu"} onPress={() => navigation.openDrawer()}/>
 
                         {!searchVisible && <Appbar.Content title="Search" subtitle={'Subtitle'}/>}
 
                         {searchVisible &&
-                            <Animatable.View animation="fadeInRight" duration={500} style={{width: '90%', justifyContent: 'flex-end'}}>
+                            <Animatable.View animation="fadeInRight" duration={500} style={{width: '80%', justifyContent: 'flex-end'}}>
                                 <Searchbar
                                     placeholder="Search"
                                     onChangeText={text => setSearchQuery(text)}

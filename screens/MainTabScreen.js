@@ -4,6 +4,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import FeatherIcon from 'react-native-vector-icons/FontAwesome';
 
 import HomeScreen from './HomeScreen';
 import DetailsScreen from './DetailsScreen';
@@ -11,6 +12,8 @@ import ExploreScreen from './ExploreScreen';
 import ProfileScreen from './ProfileScreen';
 import TodaysWords from "./TodayWords";
 import SearchScreen from "./SearchScreen";
+import {DetailsScreenFc} from "./DetailScreenFc";
+import WordScreen from "./WordScreen";
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
@@ -18,26 +21,27 @@ const DetailsStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
-  <Tab.Navigator initialRouteName="Home" activeColor="#fff">
+  <Tab.Navigator initialRouteName="TodayWords" activeColor="#fff">
+
       <Tab.Screen
-        name="Home"
-        component={HomeStackScreen}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarColor: '#009387',
-          tabBarIcon: ({ color }) => (
-            <Icon name="ios-home" color={color} size={26} />
-          ),
-        }}
+          name="TodayWords"
+          component={TodaysWords}
+          options={{
+              tabBarLabel: "Today's Words",
+              tabBarColor: '#009387',
+              tabBarIcon: ({ color }) => (
+                  <Icon name="md-text" color={color} size={26} />
+              ),
+          }}
       />
       <Tab.Screen
         name="Notifications"
         component={DetailsStackScreen}
         options={{
-          tabBarLabel: 'Updates',
+          tabBarLabel: 'History',
           tabBarColor: '#1f65ff',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-notifications" color={color} size={26} />
+            <FeatherIcon name="calendar" color={color} size={22} />
           ),
         }}
       />
@@ -53,25 +57,13 @@ const MainTabScreen = () => (
         }}
       />
       <Tab.Screen
-        name="Explore"
-        component={ExploreScreen}
-        options={{
-          tabBarLabel: 'Explore',
-          tabBarColor: '#d02860',
-          tabBarIcon: ({ color }) => (
-            <Icon name="ios-aperture" color={color} size={26} />
-          ),
-        }}
-      />
-
-      <Tab.Screen
-          name="TodayWords"
-          component={TodaysWords}
+          name="Home"
+          component={HomeStackScreen}
           options={{
-              tabBarLabel: "Today's Words",
+              tabBarLabel: 'Add Word',
               tabBarColor: '#d02860',
               tabBarIcon: ({ color }) => (
-                  <Icon name="md-text" color={color} size={26} />
+                  <Icon name="ios-add" color={color} size={26} />
               ),
           }}
       />
@@ -114,5 +106,6 @@ const DetailsStackScreen = ({navigation}) => (
             <Icon.Button name="ios-menu" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
+    <DetailsStack.Screen name="Word" component={WordScreen}/>
 </DetailsStack.Navigator>
 );

@@ -17,6 +17,7 @@ import {
 } from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import IonIcon from 'react-native-vector-icons/Ionicons';
 
 import{ AuthContext } from '../components/context';
 
@@ -32,85 +33,64 @@ export function DrawerContent(props) {
                 <View style={styles.drawerContent}>
                     <View style={styles.userInfoSection}>
                         <View style={{flexDirection:'row',marginTop: 15}}>
-                            <Avatar.Image 
+                            <Avatar.Image
                                 source={{
                                     uri: 'https://api.adorable.io/avatars/50/abott@adorable.png'
                                 }}
                                 size={50}
                             />
                             <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>John Doe</Title>
-                                <Caption style={styles.caption}>@j_doe</Caption>
+                                <Title style={styles.title}>Word Remainder</Title>
+                                <Caption style={styles.caption}>have fun with words</Caption>
                             </View>
                         </View>
 
-                        <View style={styles.row}>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>80</Paragraph>
-                                <Caption style={styles.caption}>Following</Caption>
-                            </View>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>100</Paragraph>
-                                <Caption style={styles.caption}>Followers</Caption>
-                            </View>
-                        </View>
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
-                        <DrawerItem 
+                        <DrawerItem
                             icon={({color, size}) => (
-                                <Icon 
-                                name="home-outline" 
+                                <Icon
+                                name="plus"
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Home"
+                            label="Add Word"
                             onPress={() => {props.navigation.navigate('Home')}}
                         />
-                        <DrawerItem 
+                        <DrawerItem
                             icon={({color, size}) => (
-                                <Icon 
-                                name="account-outline" 
+                                <Icon
+                                name="calendar-outline"
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Profile"
-                            onPress={() => {props.navigation.navigate('Profile')}}
+                            label="View in Calendar"
+                            onPress={() => {props.navigation.navigate('Notifications')}}
                         />
-                        <DrawerItem 
+                        <DrawerItem
                             icon={({color, size}) => (
-                                <Icon 
-                                name="bookmark-outline" 
-                                color={color}
-                                size={size}
+                                <Icon
+                                    name="database-search"
+                                    color={color}
+                                    size={size}
                                 />
                             )}
-                            label="Bookmarks"
-                            onPress={() => {props.navigation.navigate('BookmarkScreen')}}
+                            label="Search Word"
+                            onPress={() => {props.navigation.navigate('Search')}}
                         />
-                        <DrawerItem 
+                        <DrawerItem
                             icon={({color, size}) => (
-                                <Icon 
-                                name="settings-outline" 
+                                <IonIcon
+                                name="md-text"
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Settings"
-                            onPress={() => {props.navigation.navigate('SettingScreen')}}
-                        />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="account-check-outline" 
-                                color={color}
-                                size={size}
-                                />
-                            )}
-                            label="Support"
-                            onPress={() => {props.navigation.navigate('SupportScreen')}}
+                            label="Words For Today"
+                            onPress={() => {props.navigation.navigate('TodayWords')}}
                         />
                     </Drawer.Section>
                     <Drawer.Section title="Preferences">
@@ -126,10 +106,10 @@ export function DrawerContent(props) {
                 </View>
             </DrawerContentScrollView>
             <Drawer.Section style={styles.bottomDrawerSection}>
-                <DrawerItem 
+                <DrawerItem
                     icon={({color, size}) => (
-                        <Icon 
-                        name="exit-to-app" 
+                        <Icon
+                        name="exit-to-app"
                         color={color}
                         size={size}
                         />

@@ -36,8 +36,7 @@ const TodaysWords = (props) => {
     const fetchTodaysWords = () => {
         let params = {};
         setWordsLoading(true);
-        // params.date = getDateAsString(new Date());
-        params.date = '2020-06-27';
+        params.date = getDateAsString(new Date());
 
         fetchWordsForToday(params).then(res => {
             if(res.data.success){
