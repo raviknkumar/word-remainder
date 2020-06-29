@@ -1,8 +1,8 @@
 import React from 'react';
-import { 
-    View, 
-    Text, 
-    TouchableOpacity, 
+import {
+    View,
+    Text,
+    TouchableOpacity,
     Dimensions,
     StyleSheet,
     StatusBar,
@@ -20,7 +20,7 @@ const SplashScreen = ({navigation}) => {
       <View style={styles.container}>
           <StatusBar backgroundColor='#009387' barStyle="light-content"/>
         <View style={styles.header}>
-            <Animatable.Image 
+            <Animatable.Image
                 animation="bounceIn"
                 duraton="1500"
             source={require('../assets/logo.png')}
@@ -28,7 +28,7 @@ const SplashScreen = ({navigation}) => {
             resizeMode="stretch"
             />
         </View>
-        <Animatable.View 
+        <Animatable.View
             style={[styles.footer, {
                 backgroundColor: colors.background
             }]}
@@ -36,7 +36,7 @@ const SplashScreen = ({navigation}) => {
         >
             <Text style={[styles.title, {
                 color: colors.text
-            }]}>Stay connected with everyone!</Text>
+            }]}>Words Are Free, Its How You Use Them That May Cost You!</Text>
             <Text style={styles.text}>Sign in with account</Text>
             <View style={styles.button}>
             <TouchableOpacity onPress={()=>navigation.navigate('SignInScreen')}>
@@ -45,7 +45,7 @@ const SplashScreen = ({navigation}) => {
                     style={styles.signIn}
                 >
                     <Text style={styles.textSign}>Get Started</Text>
-                    <MaterialIcons 
+                    <MaterialIcons
                         name="navigate-next"
                         color="#fff"
                         size={20}
@@ -65,7 +65,7 @@ const height_logo = height * 0.28;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
+    flex: 1,
     backgroundColor: '#009387'
   },
   header: {
