@@ -56,6 +56,7 @@
 		2DA94D07BCFC3DEEC30EF62A /* libPods-rnv5.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnv5.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3119A6C9B007399104E30A61 /* Pods-rnv5-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnv5-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-rnv5-tvOS/Pods-rnv5-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3279571BC94A3DD383F8E13C /* Pods-rnv5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnv5.release.xcconfig"; path = "Target Support Files/Pods-rnv5/Pods-rnv5.release.xcconfig"; sourceTree = "<group>"; };
+		3D48B71224A9EDF100EEC70E /* rnv5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = rnv5.entitlements; path = rnv5/rnv5.entitlements; sourceTree = "<group>"; };
 		3FFC90DA9E42CF99FD8EFE71 /* Pods-rnv5-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnv5-tvOS.release.xcconfig"; path = "Target Support Files/Pods-rnv5-tvOS/Pods-rnv5-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		53F625AC448B72AD12AF32B6 /* libPods-rnv5Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnv5Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8F5406A3822AE7D8CC5A7B /* Pods-rnv5Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnv5Tests.release.xcconfig"; path = "Target Support Files/Pods-rnv5Tests/Pods-rnv5Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		13B07FAE1A68108700A75B9A /* rnv5 */ = {
 			isa = PBXGroup;
 			children = (
+				3D48B71224A9EDF100EEC70E /* rnv5.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,7 +196,6 @@
 				E27F52F4B3DC5882D9E39677 /* Pods-rnv5Tests.debug.xcconfig */,
 				5B8F5406A3822AE7D8CC5A7B /* Pods-rnv5Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -293,6 +294,10 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = PQTT5P8446;
+						ProvisioningStyle = Automatic;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -309,6 +314,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -675,8 +681,13 @@
 			baseConfigurationReference = 97D07CAD72E76648ABF36A96 /* Pods-rnv5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = rnv5/rnv5.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = PQTT5P8446;
 				INFOPLIST_FILE = rnv5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -684,8 +695,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.rnv5;
 				PRODUCT_NAME = rnv5;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -695,7 +708,12 @@
 			baseConfigurationReference = 3279571BC94A3DD383F8E13C /* Pods-rnv5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = rnv5/rnv5.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development: raviknkumar5@gmail.com (5WY889W5FU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: raviknkumar5@gmail.com (5WY889W5FU)";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQTT5P8446;
 				INFOPLIST_FILE = rnv5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -703,8 +721,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.rnv5;
 				PRODUCT_NAME = rnv5;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
