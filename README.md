@@ -1,25 +1,89 @@
-# React Navigation v5 mix
+# Word Remainder App
 
-This project is part of YouTube tutorial series on React Navigation 5. Here I have used every navigator option available and combine them in a single project to create a seemless user navigation experience for the app user.
-
-Then I have created some extra things such as login, signup & splash screen and provided an authentication flow using AsycStorage. Also I have created form validation for the login screen.
-
-Here you can find complete tutorial series and each video link.
-
-# YouTube Video List
-- [Complete React Navigation v5 Playlist](https://www.youtube.com/playlist?list=PLQWFhX-gwJbmmqcP-9zMXBaxQbGKfIJY2)
-- [Login Form Validation Tutorial](https://youtu.be/uxawinQ2tTk)
-- [Login Authentication Tutorial by Using AsyncStorage](https://youtu.be/gvF6sFIPfsQ)
-- [Login & Signup Screen UI Design Tutorial](https://youtu.be/Rs72pRwXIzA)
-- [Custom Drawer Navigator Tutorial](https://youtu.be/ayxRtBHw754)
-- [Material Bottom Tab Navigator Tutorial](https://youtu.be/RSzITFbOtpQ)
-- [Drawer Navigator Tutorial](https://youtu.be/2Tj9y8lfiyo)
-- [Stack Navigator Tutorial](https://youtu.be/a9jSyZXYGn8)
+This project is to help all the word lovers to keep track of the words they learn every day.
 
 
 # Project Demo
-![React Navigation v5 Mix App iPhone Demo](https://raw.githubusercontent.com/itzpradip/react-navigation-v5-mix/master/app-interaction-demo-iphone.gif)
-### iPhone Demo
+## Light Theme
 
-![React Navigation v5 Mix App Android Demo](https://raw.githubusercontent.com/itzpradip/react-navigation-v5-mix/master/app-interaction-demo-android.gif)
-### Android Demo
+### Landing Screen
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/HomeLtTheme.png?raw=true"
+   width="300" alt="Landing Screen">
+</p>
+
+### Login
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/LoginLtTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+
+### SignUp
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/SignupLtTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+### Navigation Menu
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/MenuLtTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+### Today's word
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/TodaysWordLtTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+### Past Words History
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/CalendarViewLtTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+### Add Words
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/AddWordLtTheme.jpeg?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+<hr/>
+
+## Dark Theme
+### Landing Screen
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/HomeDarkTheme.png?raw=true"
+   width="300" alt="Landing Screen">
+</p>
+
+### Login
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/LoginDarkTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+### Navigation Menu
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/MenuDarkTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+### Today's word
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/TodaysWordDarkTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+### Past Words History
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/CalendarViewDarkTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
+
+### Add Words
+<p >
+  <img src="https://github.com/raviknkumar/word-remainder/blob/wr_v1/assets/demo/AddWordDarkTheme.png?raw=true"
+   width="300" alt="accessibility text">
+</p>
